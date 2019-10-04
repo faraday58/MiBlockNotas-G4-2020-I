@@ -16,5 +16,19 @@ namespace MiBlockNotas_G4_2020_I
         {
             InitializeComponent();
         }
+
+        private void CopiarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (richtxtbBlocNotas.SelectedText != string.Empty)
+            {
+                Clipboard.SetData(DataFormats.Text, richtxtbBlocNotas.SelectedText);
+            }
+        }
+
+        private void PegarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            int posicion = richtxtbBlocNotas.SelectionStart;
+            richtxtbBlocNotas.Text = richtxtbBlocNotas.Text.Insert(posicion, Clipboard.GetText());
+        }
     }
 }
