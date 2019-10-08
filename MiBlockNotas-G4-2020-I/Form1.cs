@@ -34,10 +34,11 @@ namespace MiBlockNotas_G4_2020_I
                 }
                 else
                 {
-                    fs = new FileStream("Actividad.txt", FileMode.Create, FileAccess.Write);
+                    fs = new FileStream("error_log.txt", FileMode.Append, FileAccess.Write);
                     sw = new StreamWriter(fs);
-                    sw.WriteLine("Intento de crear archivo");
+                    sw.WriteLine("Error al intentar guardar archivo " + File.GetLastWriteTime("error_log.txt"));
                 }
+                
 
             }
             catch(IOException error)
@@ -56,6 +57,7 @@ namespace MiBlockNotas_G4_2020_I
         {
             FileStream fs = null;
             StreamReader sr = null;
+            
 
             try
             {
@@ -85,7 +87,16 @@ namespace MiBlockNotas_G4_2020_I
                         aux = aux + cadena + "\n";
                     }
                     richtxtbBlocNotas.Text = aux;
+                    sr.Close();
 
+                }
+                else
+                {
+                    StreamWriter sw = null;
+                    fs = new FileStream("error_Abrir.txt", FileMode.Append, FileAccess.Write);
+                    sw = new StreamWriter(fs);
+                    sw.WriteLine("Error al intentar abrir  archivo " + File.GetLastWriteTime("error_Abrir.txt"));
+                    sw.Close();
                 }
 
 
@@ -96,11 +107,41 @@ namespace MiBlockNotas_G4_2020_I
             }
             finally
             {
-                sr.Close();
+                
                 fs.Close();
 
             }
            
+        }
+
+        private void DestruirToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FileStream fs = null;
+            try
+            {
+                OpenFileDialog openFileDialog = new OpenFileDialog();
+                openFileDialog.Filter = "Texto (*.txt)|*.txt|Todos los Archivos (*.*)|*.*";
+
+                if(openFileDialog.ShowDialog()== DialogResult.OK)
+                {
+                    fs = new FileStream(openFileDialog.FileName, FileMode.Open, FileAccess.Write);
+                    Random aleatorio = new Random();
+
+                    for (int i = 0; i <= 14; i++)
+                    {
+                        fs.Seek(i, SeekOrigin.Begin);
+                        fs.WriteByte((byte)aleatorio.Next(255));
+                    }
+                }
+                
+
+            }
+            catch (IOException error)
+            {
+                Console.WriteLine(" error  " + error.Message);
+            }
+
+            fs.Close();
         }
     }
 }

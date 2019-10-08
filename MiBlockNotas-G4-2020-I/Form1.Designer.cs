@@ -46,6 +46,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.txtbFecha = new System.Windows.Forms.TextBox();
             this.richtxtbBlocNotas = new System.Windows.Forms.RichTextBox();
+            this.destruirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -66,6 +67,7 @@
             this.archivoToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.abrirToolStripMenuItem,
             this.guardarToolStripMenuItem,
+            this.destruirToolStripMenuItem,
             this.guardarComoToolStripMenuItem,
             this.toolStripMenuItem1,
             this.salirToolStripMenuItem});
@@ -76,32 +78,32 @@
             // abrirToolStripMenuItem
             // 
             this.abrirToolStripMenuItem.Name = "abrirToolStripMenuItem";
-            this.abrirToolStripMenuItem.Size = new System.Drawing.Size(159, 22);
+            this.abrirToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.abrirToolStripMenuItem.Text = "A&brir";
             this.abrirToolStripMenuItem.Click += new System.EventHandler(this.AbrirToolStripMenuItem_Click);
             // 
             // guardarToolStripMenuItem
             // 
             this.guardarToolStripMenuItem.Name = "guardarToolStripMenuItem";
-            this.guardarToolStripMenuItem.Size = new System.Drawing.Size(159, 22);
+            this.guardarToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.guardarToolStripMenuItem.Text = "&Guardar";
             this.guardarToolStripMenuItem.Click += new System.EventHandler(this.GuardarToolStripMenuItem_Click);
             // 
             // guardarComoToolStripMenuItem
             // 
             this.guardarComoToolStripMenuItem.Name = "guardarComoToolStripMenuItem";
-            this.guardarComoToolStripMenuItem.Size = new System.Drawing.Size(159, 22);
+            this.guardarComoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.guardarComoToolStripMenuItem.Text = "Guar&dar como...";
             // 
             // toolStripMenuItem1
             // 
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(156, 6);
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(177, 6);
             // 
             // salirToolStripMenuItem
             // 
             this.salirToolStripMenuItem.Name = "salirToolStripMenuItem";
-            this.salirToolStripMenuItem.Size = new System.Drawing.Size(159, 22);
+            this.salirToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.salirToolStripMenuItem.Text = "&Salir";
             // 
             // editarToolStripMenuItem
@@ -189,6 +191,13 @@
             this.richtxtbBlocNotas.TabIndex = 3;
             this.richtxtbBlocNotas.Text = "";
             // 
+            // destruirToolStripMenuItem
+            // 
+            this.destruirToolStripMenuItem.Name = "destruirToolStripMenuItem";
+            this.destruirToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.destruirToolStripMenuItem.Text = "Destruir";
+            this.destruirToolStripMenuItem.Click += new System.EventHandler(this.DestruirToolStripMenuItem_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -232,6 +241,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtbFecha;
         private System.Windows.Forms.RichTextBox richtxtbBlocNotas;
+        private System.Windows.Forms.ToolStripMenuItem destruirToolStripMenuItem;
     }
 }
 
