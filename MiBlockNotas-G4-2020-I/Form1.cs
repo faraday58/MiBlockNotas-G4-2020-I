@@ -143,5 +143,24 @@ namespace MiBlockNotas_G4_2020_I
 
             fs.Close();
         }
+
+        private void NuevoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            txtbNombre.Clear();
+            txtbFecha.Clear();
+            txtbAutor.Clear();
+            richtxtbBlocNotas.Clear();
+        }
+
+        private void CopiarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Clipboard.SetText(richtxtbBlocNotas.SelectedText);
+        }
+
+        private void PegarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            string texto = Clipboard.GetText();
+            richtxtbBlocNotas.Text = richtxtbBlocNotas.Text.Insert(richtxtbBlocNotas.SelectionStart, texto);s
+        }
     }
 }
