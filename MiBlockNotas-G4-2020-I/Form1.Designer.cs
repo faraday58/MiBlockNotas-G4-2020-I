@@ -46,6 +46,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.txtbFecha = new System.Windows.Forms.TextBox();
             this.richtxtbBlocNotas = new System.Windows.Forms.RichTextBox();
+            this.destruirToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -67,6 +68,7 @@
             this.abrirToolStripMenuItem,
             this.guardarToolStripMenuItem,
             this.guardarComoToolStripMenuItem,
+            this.destruirToolStripMenuItem1,
             this.toolStripMenuItem1,
             this.salirToolStripMenuItem});
             this.archivoToolStripMenuItem.Name = "archivoToolStripMenuItem";
@@ -190,6 +192,14 @@
             this.richtxtbBlocNotas.TabIndex = 3;
             this.richtxtbBlocNotas.Text = "";
             // 
+            // 
+            // destruirToolStripMenuItem1
+            // 
+            this.destruirToolStripMenuItem1.Name = "destruirToolStripMenuItem1";
+            this.destruirToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.destruirToolStripMenuItem1.Text = "Destruir";
+            this.destruirToolStripMenuItem1.Click += new System.EventHandler(this.DestruirToolStripMenuItem1_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -233,6 +243,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtbFecha;
         private System.Windows.Forms.RichTextBox richtxtbBlocNotas;
+         private System.Windows.Forms.ToolStripMenuItem destruirToolStripMenuItem1;
     }
 }
 
