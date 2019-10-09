@@ -102,5 +102,10 @@ namespace MiBlockNotas_G4_2020_I
             }
            
         }
+
+        private void GuardarComoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
